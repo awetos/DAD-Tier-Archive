@@ -1,11 +1,15 @@
-.my-button{
-    background-color: pink;
+.my-button {
+    background-color: #424240;
+    color: rgb(255, 255, 255);
+    text-decoration: none;
     padding: 12px;
+    
 }
 
-.my-button a{
-    text-decoration: none;
+.my-button:hover{
+    background-color: #8d8d8d;
 }
+
 
 .links-row{
     display: flex;
@@ -16,11 +20,18 @@
     height:fit-content;
     margin-top: auto;
     margin-bottom: 0;
+
 }
 
 .link-whole{
     display: flex;
-    min-height: 120px;
-    background-color:rosybrown;
+    height:fit-content;
+    background-color: #2A2B2A;
     flex-direction: column;
+    color: white;
+}
+
+.title{
+    font-size: 4em;
+    text-align: center;
 }

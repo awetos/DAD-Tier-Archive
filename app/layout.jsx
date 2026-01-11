@@ -11,7 +11,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
-                <link rel="icon" href="/favicon.svg" sizes="any" />
+                <link rel="icon" href="/medal.png" sizes="any" />
             </head>
             <body className="">
                 <Header/>

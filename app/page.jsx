@@ -11,7 +11,7 @@
             <p>Guess who just made...</p>
                 <span>Some DAD shit bitches.</span>
             </div>
-
+        
             <Link href="\submit">Submit.</Link>
             </div>
         );

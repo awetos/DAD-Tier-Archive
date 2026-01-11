@@ -4,21 +4,27 @@ import classes from './navigation.module.css'
 export default function Header(){
     return<>
     <div className ={classes['link-whole']}>
+
+        <div className = {classes['title']}>DAD Tier Archive</div>
         <div className={classes['links-row']}>
-            <div className={classes['my-button']}>
-            <Link href="/">Home</Link>
-            </div>
+            
+            <Link className={classes['my-button']} href="/">
+                Home
+            </Link>
 
-            <div className={classes['my-button']}>
-                <Link href="/submit">Submit a Tierlist</Link>
-                </div>
-            <div className={classes['my-button']}>
-                <Link href="/pending">Pending Tierlists</Link>
-                </div>
+            <Link className={classes['my-button']} href="/submit">
+                Submit a Tierlist
+            </Link>
 
-            <div className={classes['my-button']}>
-                <Link href="https://dadtierlist.pages.dev/">Create a Tierlist</Link>
-                </div>
+            <Link className={classes['my-button']} href="/pending">
+               Pending Tierlists
+            </Link>
+
+            
+            <Link className={classes['my-button']} href="https://dadtierlist.pages.dev/">
+                Create a Tierlist
+            </Link>
+
         </div>
     </div>
     </>

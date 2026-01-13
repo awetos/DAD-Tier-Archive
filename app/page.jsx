@@ -1,5 +1,6 @@
 import Link from 'next/link';
 import { getNetlifyContext } from 'utils';
+export const dynamic = "force-dynamic";
 
 import readRow from './actions/readRow';
 

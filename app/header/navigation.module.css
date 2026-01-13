@@ -1,8 +1,17 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+.onest {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+}
+
 .my-button {
     background-color: #424240;
     color: rgb(255, 255, 255);
     text-decoration: none;
     padding: 12px;
+    margin: 3px;
+    border-radius: 1px;
     
 }
 
@@ -14,7 +23,6 @@
 .links-row{
     display: flex;
     flex-direction: row;
-    gap: 2px;
     flex-wrap: wrap;
     justify-content: center;
     height:fit-content;
@@ -25,7 +33,7 @@
 
 .link-whole{
     display: flex;
-    height:fit-content;
+    height: fit-content;
     background-color: #2A2B2A;
     flex-direction: column;
     color: white;
@@ -34,4 +42,8 @@
 .title{
     font-size: 4em;
     text-align: center;
+}
+
+.link-whole span{
+    font-family: "Onest", Arial, Helvetica, sans-serif;
 }

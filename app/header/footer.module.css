@@ -1,0 +1,24 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+.onest {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+}
+
+.footer-whole{
+    display: flex;
+    height: fit-content;
+    background-color: #2A2B2A;
+    flex-direction: row;
+    color: #7A7B76;
+    margin-top: auto;
+    padding-left: 5px;
+    word-wrap: break-word;
+}
+
+.footer-whole p{
+    font-family: "Onest", Arial, Helvetica, sans-serif;
+}
+.footer-whole a{
+    color: #7A7B76;
+}

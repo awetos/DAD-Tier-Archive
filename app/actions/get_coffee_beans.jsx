@@ -1,21 +1,23 @@
 'use server';
-
+import { neon } from '@netlify/neon';
 export default async function testBeanConnection(event){
-    try {
-        const response = await fetch('/netlify/functions/get_coffee_blends');
         
-        const blends = await response.json();
-        /*
-        const blendsList = document.getElementById('blends');
-        blends.forEach((blend) => {
-        const li = document.createElement('li');
-        li.innerText = `${blend.name} - ${blend.notes}`;
-        blendsList.appendChild(li);
-        });*/
+    const sql = neon(); // automatically uses env NETLIFY_DATABASE_URL
+    const res = await sql`SELECT * FROM favorite_coffee_blends`;
 
-        console.log(blends);
-    } catch (error) {
-        console.error('Error:', error);
+    const newcoffee = {
+        'name': `Starrelly's special sauce`,
+        'origin': `My butt hole`,
+        'notes': 'existential horror'
     }
-    return;
+    await addARow(sql, newcoffee);
+
+    console.log(res);
+
+}
+
+async function addARow(sql, newCoffee){
+    await sql`INSERT INTO favorite_coffee_blends (name, origin, notes) VALUES (
+    ${newCoffee.name},  ${newCoffee.origin}, ${newCoffee.notes}
+    )`
 }

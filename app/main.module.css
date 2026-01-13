@@ -1,0 +1,20 @@
+.main-card{
+    margin: 20px;
+    background-color: snow;
+    box-shadow: 5px 5px 3px rgb(33, 33, 33);
+  /*x: 10, y: 10, blur: 5, color: */
+    padding: 20px;
+    word-wrap: break-word;
+}
+
+
+@media screen and (max-width: 600px){
+   
+    .main-card{
+        margin: 5px;
+        margin-top: 20px;
+        margin-bottom: 20px;
+        padding: 5px;
+    }
+
+}

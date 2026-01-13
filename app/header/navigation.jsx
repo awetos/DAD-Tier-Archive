@@ -5,24 +5,24 @@ export default function Header(){
     return<>
     <div className ={classes['link-whole']}>
 
-        <div className = {classes['title']}>DAD Tier Archive</div>
+        <div className = {classes['title']}><span>DAD Tierlist Archive</span></div>
         <div className={classes['links-row']}>
             
             <Link className={classes['my-button']} href="/">
-                Home
+                <span>Home</span>
             </Link>
 
             <Link className={classes['my-button']} href="/submit">
-                Submit a Tierlist
+                <span>Submit a Tierlist</span>
             </Link>
 
             <Link className={classes['my-button']} href="/pending">
-               Pending Tierlists
+               <span>Pending Tierlists</span>
             </Link>
 
             
             <Link className={classes['my-button']} href="https://dadtierlist.pages.dev/">
-                Create a Tierlist
+                <span>Create a Tierlist</span>
             </Link>
 
         </div>

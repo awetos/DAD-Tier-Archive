@@ -10,12 +10,23 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@cloudinary/react": "^1.14.3",
+    "@cloudinary/url-gen": "^1.22.0",
+    "@heroui/accordion": "^2.2.26",
+    "@heroui/react": "^2.8.7",
+    "@heroui/system": "^2.4.25",
+    "@heroui/theme": "^2.4.25",
     "@neondatabase/serverless": "^1.0.2",
     "@netlify/blobs": "^10.5.0",
+    "@netlify/neon": "^0.1.0",
     "blobshape": "^1.0.0",
     "bright": "^1.0.0",
+    "cloudinary": "^2.8.0",
+    "framer-motion": "^12.26.1",
     "markdown-to-jsx": "^7.7.16",
+    "neon": "^2.0.0",
     "next": "^16.0.8",
+    "next-cloudinary": "^6.17.5",
     "react": "19.2.3",
     "react-dom": "19.2.3",
     "unique-names-generator": "^4.7.1"

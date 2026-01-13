@@ -1,8 +1,22 @@
+@import url('https://fonts.googleapis.com/css2?family=Jua&display=swap');
+.jua-regular {
+  font-family: "Jua", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+
 body{ 
     background-color: #1B1B1C; /*background color of dad-tiermaker.*/
     background-color: #2A3132; /*background color of dad-site*/
+  min-height: 100vh;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
 }
 
-p{
-    color: white;
+p, span, label, button, a{
+    font-family: Arial, Helvetica, sans-serif;
 }
+
+/*Black and white color scheme: https://www.schemecolor.com/middle-graphite.php*/

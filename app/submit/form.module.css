@@ -1,0 +1,28 @@
+.custom-form label{
+    font-weight: normal;
+}
+
+.form-blocks{
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+}
+
+
+@media screen and (max-width: 600px){
+    .form-blocks{
+        flex-direction: column;
+    }
+}
+
+.input-fields{
+    background-color: linen;
+    flex: 1;
+    margin: 5px;
+    padding: 5px;
+}
+
+.previewArea-fields{
+    background-color:orange;
+    flex: 1;
+}

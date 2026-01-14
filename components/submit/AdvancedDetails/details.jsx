@@ -10,6 +10,9 @@ export default function Details(){
     const [draft, setDraft] = useState(previousDescription);
     //we can use a useEffect for draft if Details loses its info due to re-rendering in the midst of editing
     // but for now, it seems fine
+    useEffect(() => {
+        setDraft(previousDescription);
+        }, [previousDescription]);
 
     function HandleOnBlur(event){
         previewContext.handlers.changeDescriptionHandler(event.target.value);

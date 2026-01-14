@@ -52,6 +52,6 @@ export default async function uploadToCloudinary(formData){
     ).end(sharp_resized_buffer);
   });
   return { image_url: uploadResult.secure_url,
-    image_thumbnail_url: uploadResult_thumbnail.securel_url
+    image_thumbnail_url: uploadResult_thumbnail.secure_url
   };
 }

@@ -11,7 +11,7 @@ export default function usePreviewerInitializer(){
     }
 
     function resetPreview(){
-      changeImage();
+      changeImage(null);
       changeTitle("");
       changeDescription("");
       const today = new Date();
@@ -19,7 +19,6 @@ export default function usePreviewerInitializer(){
       changeDate(formattedToday);
       changePostNumber("");
       changeType("skill-level");
-
     }
 
    //set title

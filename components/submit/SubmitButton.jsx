@@ -1,7 +1,7 @@
 'use client';
 import classes from '@/components/submit/submitform.module.css';
 
-import { useEffect } from 'react';
+import { useEffect, useRef } from 'react';
 import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
 import { usePreviewerReadValues } from './PreviewProvider/usePreviewProvider';
@@ -12,6 +12,7 @@ import BasicDescription from '@/components/submit/basicdescription';
 import AdvancedDetails from '@/components/submit/advanceddetails';
 import Preview from '@/components/submit/Preview/Preview';
 
+//disables button
 function SubmitButton() {
   const { pending } = useFormStatus();
   return (
@@ -21,24 +22,33 @@ function SubmitButton() {
   );
 }
 
+//unused, since it stacks ontop of formState status
 function SubmittingText() {
   const { pending } = useFormStatus();
   return pending ? <p>is submitting...</p> : null;
 }
 
+
 export default function SubmitForm() {
   const [formState, formAction] = useActionState(submit, {});
   const previewContext = usePreviewerReadValues();
-
+ 
+  //console.log(form);
+  
+const myForm = useRef(null);
+ 
+  //this one will reset preview on different submissions, allowing multi-submits
   useEffect(() => {
-    if (formState?.status === 'Your image and data was uploaded.') {
-      previewContext.handlers.resetPreview();
-    }
-  }, [formState?.status]);
+  if (formState?.status === 'Your image and data was uploaded.') {
+    previewContext.handlers.resetPreview();
+    myForm.current?.reset();
+  }
+}, [formState?.success_image_url]);
+
 
 
   return (
-    <form action={formAction}>
+    <form ref={myForm} action={formAction}>
       
        {/* FormAction will change Status to Sent! when completed. */}
         <div className={classes['form-blocks']}>

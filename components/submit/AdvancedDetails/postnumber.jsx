@@ -1,6 +1,6 @@
 
 import classes from '@/components/submit/dropdown.module.css'
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import { usePreviewerReadValues } from '../PreviewProvider/usePreviewProvider';
 export default function PostNumber(){
 
@@ -8,8 +8,11 @@ export default function PostNumber(){
     const previousPostNumber = previewContext.values.postNumber;
 
     const [draft, setDraft] = useState(previousPostNumber);
-
+    useEffect(() => {
+        setDraft(previousPostNumber);
+        }, [previousPostNumber]);
     const [postStatus, setPostStatus] = useState("");
+
     function onBlurHandler(event){
         setPostStatus(validatePostNumber(event.target.value));
     }

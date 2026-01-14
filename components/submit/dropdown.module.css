@@ -1,0 +1,32 @@
+.no-border-button {
+    border: none;
+    background-color: wheat;
+    font: white;
+    width: 100%;
+    cursor: pointer;
+}
+.no-border-button:hover{
+    background-color: burlywood;
+}
+.hidden {
+    background-color: wheat;
+}
+
+.text-area{
+    width: calc(100% - 6px);
+    padding: 0;
+    margin: 3px;
+    border: 2px;
+}
+
+.subtitle{
+    font-size: small;
+    font-family: Arial, Helvetica, sans-serif
+
+}
+
+.subtitle-error p{
+     font-size: small;
+     margin-top: 0;
+    color: red;
+}

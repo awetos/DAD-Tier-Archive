@@ -1,12 +1,16 @@
-import {Accordion, AccordionItem} from "@heroui/react";
+import Dropdown from './dropdown';
+import { useState } from 'react';
 import classes from '@/components/submit/advanceddetails.module.css'
-
 export default function AdvancedDetails() {
-  const defaultContent =
-    "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.";
-
+  const [open, setOpen] = useState(false);
+  
   return (
-    <div>
+    <div className={classes['advanced-drop-down']}>
+    <Dropdown
+        open = {open}
+        setOpen ={setOpen}>
+        </Dropdown>
     </div>
+        
   );
 }

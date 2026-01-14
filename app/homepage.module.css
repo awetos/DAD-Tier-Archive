@@ -1,11 +1,15 @@
 .interior-content {
-    color: purple;
+  color: black;
+}
+
+.centered-content{
+  text-align: center;
 }
 
 
 .image-grid{
     display: flex;
   flex-wrap: wrap;
-  gap: 2px;
+  gap: 4px;
   justify-content: center;   
 }

@@ -1,20 +1,18 @@
 'use client'
 import classes from '@/components/submit/imagesubmission.module.css'
 import {useRef, useState, useEffect} from 'react'
-import { CldUploadWidget } from 'next-cloudinary';
+import { usePreviewerReadValues } from './PreviewProvider/usePreviewProvider';
 
-let varied_num = 1;
-
-export default function ImageSubmission({shareTextChangesProp, shareImageChangesProp}){
+export default function ImageSubmission(){
     const imageInput = useRef(); //may be useful if you want your own image button!
 
     function handleInputClick(event){
         imageInput.current.click();
     }
 
+    const previewContext = usePreviewerReadValues();
+
     function handleImageChange(event){
-        shareTextChangesProp(varied_num.toString());
-        varied_num++;
         const file = event.target.files[0];
         console.log(file.name);
 
@@ -25,12 +23,10 @@ export default function ImageSubmission({shareTextChangesProp, shareImageChanges
         const fileReader = new FileReader();
 
         fileReader.onload = ()=>{
-            shareImageChangesProp(fileReader.result);
+            previewContext.handlers.changeImageHandler(fileReader.result);
         }; //this is called after readAsDataURL is done.
         fileReader.readAsDataURL(file);
 
-        shareTextChangesProp(5);
-        
         
     }
 

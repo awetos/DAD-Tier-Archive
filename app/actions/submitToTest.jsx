@@ -8,6 +8,7 @@ export default async function submit(prevState, formData){ //add prevState due t
     if (formData.get('tier-title') == null || formData.get('tier-title') == ""){
         return {status: "Title can't be empty"}
     }
+
     
     if (img_res.error!=null){
         const error_msg = 'Error uploading: ' + img_res.error;

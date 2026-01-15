@@ -3,6 +3,7 @@ import getIDAsNumber from '@/app/actions/modtools/steps/validatePostNumber'
 import getPendingRow from '@/app/actions/modtools/steps/getPendingRow'
 import sendToApprovedDB from '@/app/actions/modtools/steps/sendToApprovedDB';
 import deleteFromDB from '@/app/actions/modtools/steps/deleteFromDB';
+import uploadModLog from '@/app/actions/modtools/uploadModLog';
 
 //assume you receive a formData with formData.get("id") == id
 export default async function approve(prevState, formData){
@@ -32,6 +33,7 @@ export default async function approve(prevState, formData){
         }
     }
     console.log(request_log);
+    await uploadModLog(request_log);
     return {request_log};
 }
 

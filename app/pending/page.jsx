@@ -2,7 +2,7 @@ export const dynamic = "force-dynamic";
 import getAllEntries from '@/app/actions/pending/getPendingList'
 import Pending from '@/components/templates/pending';
 import classes from '@/components/templates/pending.module.css'
-
+import getModsLastVisit from '@/app/actions/pending/getModsLastVisit';
 export default async function pendingPage(){
 
     const allEntries = await getAllEntries();
@@ -18,10 +18,12 @@ export default async function pendingPage(){
       renderable = allEntries.map((entry)=>ReturnPendingEntry(entry))
     }
     
+    let lastVisit = await getModsLastVisit();
 
     return <>
     
     <p>Submissions will be reviewed and once accepted will appear in the browse page.</p>
+    <p>Mod last seen: {lastVisit}</p>
     <div className={classes['pending-list']} >
          <div className={`${classes['entry']} ${classes['label-headers']}`}>
 

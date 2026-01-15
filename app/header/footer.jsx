@@ -12,6 +12,8 @@ export default function Footer(){
                 <p>
                     <Link href="/changes">Vers 1.0
                     </Link>
+                      <Link href="/modtool">Mod Tool
+                    </Link>
                 </p>
         </div>
 }

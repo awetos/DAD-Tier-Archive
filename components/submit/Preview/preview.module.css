@@ -23,7 +23,6 @@
     min-width: 100%;
     width: fit-content;
     height: fit-content;
-   
     position: relative; /*Needed for Image*/
     justify-items: center;
     align-items: center;

@@ -1,0 +1,44 @@
+
+.image-viewer{
+    display: flex;
+    height: 500px;
+    width: 100%;
+    position: relative; /*Needed for Image*/
+    justify-items: center;
+    align-items: center;
+    background-color: cornflowerblue;
+}
+
+.container{
+    display: flex;
+    flex-direction: column;
+    background-color: rosybrown;
+    align-items: center;
+}
+
+.image-viewer img{
+    object-fit: contain; 
+}
+
+.title{
+    display: flex;
+    background-color: aqua;
+}
+.tier-type{
+    background-color: seagreen;
+
+}
+.date-submitted{
+    background-color: darksalmon;
+
+}
+.date-created{
+    background-color: red;
+}
+.post-number{
+    background-color:goldenrod;
+}
+.description{
+    background-color:lightgray;
+
+}

@@ -22,7 +22,7 @@ export default function BasicDescription(){
         setDraft(event.target.value);
     }
     return <>
-      <label htmlFor="tier-title">Tier Title  <span className={classes['subtitle']}>Do not include "Tierlist" in the title</span></label>
+      <label htmlFor="tier-title">Tier Title </label>
             <br/>
         <input 
             type="text" 

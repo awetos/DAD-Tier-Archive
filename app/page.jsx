@@ -4,14 +4,13 @@ export const dynamic = "force-dynamic";
 
 import Entry from '@/components/templates/entry';
 import classes from './homepage.module.css';
-import getAllEntries from './actions/getAllEntries';
+import getTierlists from '@/app/actions/browse/getTierlists';
 
 const ctx = getNetlifyContext();
 
 export default async function Page() {
 
-    const allEntries = await getAllEntries();
-    console.log(allEntries);
+    const allEntries = await getTierlists();
 
     return (
         <div> 
@@ -33,7 +32,7 @@ export default async function Page() {
 }
 
 function ReturnEntry(data){
-  if((data.my_image_path &&  data.my_text)
+  if((data.id &&  data.image_url)
   ){
     return <Entry key={data.id} data={data}/>
   }

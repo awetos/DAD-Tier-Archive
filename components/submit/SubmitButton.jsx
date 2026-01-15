@@ -33,17 +33,15 @@ export default function SubmitForm() {
   const [formState, formAction] = useActionState(submit, {});
   const previewContext = usePreviewerReadValues();
  
-  //console.log(form);
   
-const myForm = useRef(null);
+  const myForm = useRef(null);
  
   //this one will reset preview on different submissions, allowing multi-submits
   useEffect(() => {
   if (formState?.status === 'Your image and data was uploaded.') {
     previewContext.handlers.resetPreview();
     myForm.current?.reset();
-  }
-}, [formState?.success_image_url]);
+  }}, [formState?.success_image_url]);
 
 
 

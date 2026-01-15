@@ -7,6 +7,16 @@ export default async function pendingPage(){
 
     const allEntries = await getAllEntries();
     console.log(allEntries);
+
+    let renderable = <></>
+    let no_entries = <></>
+    if(!allEntries){
+      renderable = <></>
+      no_entries = <p>No entries in pending queue</p>
+    }
+    else{
+      renderable = allEntries.map((entry)=>ReturnPendingEntry(entry))
+    }
     
 
     return <>
@@ -23,8 +33,9 @@ export default async function pendingPage(){
               <div className={classes['entry-submitted']}><p>Submission Time</p></div>
               <div className={classes['entry-status']}><p>Status</p></div>
           </div>
-        {allEntries.map((entry)=>ReturnPendingEntry(entry))}
+          {renderable}
     </div>
+    {no_entries}
          
     </>
 }

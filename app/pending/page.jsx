@@ -1,4 +1,6 @@
+'use client'
 export const dynamic = "force-dynamic";
+
 import getAllEntries from '@/app/actions/pending/getPendingList'
 import Pending from '@/components/templates/pending';
 import classes from '@/components/templates/pending.module.css'

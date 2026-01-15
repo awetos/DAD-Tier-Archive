@@ -18,7 +18,7 @@ export default function usePreviewerInitializer(){
       const formattedToday = today.toISOString().split('T')[0];
       changeDate(formattedToday);
       changePostNumber("");
-      changeType("skill-level");
+      changeType("other");
     }
 
    //set title
@@ -55,7 +55,7 @@ export default function usePreviewerInitializer(){
 
 
    //set type. Comes from a radial menu so it's always valid
-   const [type, changeType] = useState("skill-level");
+   const [type, changeType] = useState("other");
    function changeTypeHandler(newType){
     changeType(newType);
    }

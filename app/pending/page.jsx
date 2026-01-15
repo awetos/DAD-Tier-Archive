@@ -18,12 +18,13 @@ export default async function pendingPage(){
       renderable = allEntries.map((entry)=>ReturnPendingEntry(entry))
     }
     
-    let lastVisit = await getModsLastVisit();
+    let serverTime_last_visit = await getModsLastVisit();
+    let localTime_last_visit = new Date(serverTime_last_visit).toLocaleString();
 
     return <>
     
     <p>Submissions will be reviewed and once accepted will appear in the browse page.</p>
-    <p>Mod last seen: {lastVisit}</p>
+    <p>Mod last seen: {localTime_last_visit}</p>
     <div className={classes['pending-list']} >
          <div className={`${classes['entry']} ${classes['label-headers']}`}>
 

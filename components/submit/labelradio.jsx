@@ -10,11 +10,7 @@ export default function RadioSet(){
            <p></p> 
         <label> Tierlist Type </label>
         <br/>
-            <div>
-                <input type="radio" name="tier-type" id="tier-type-selection" value="skill-level" 
-                 defaultChecked={tierType ==="skill-level"} onChange={onChangeHandler}/>
-                <label htmlFor="tier-type-selection">skill-level</label>
-            </div>
+           
 
             <div>
                 <input type="radio" name="tier-type" id="other-selection" value="other" 
@@ -24,6 +20,11 @@ export default function RadioSet(){
                 {/*name is the key */}
                 {/*Value is what is actually stored in the form data*/}
                 {/*name: value */}
+            </div>
+            <div>
+                <input type="radio" name="tier-type" id="tier-type-selection" value="skill-level" 
+                 defaultChecked={tierType ==="skill-level"} onChange={onChangeHandler}/>
+                <label htmlFor="tier-type-selection">skill-level</label>
             </div>
         
     </>

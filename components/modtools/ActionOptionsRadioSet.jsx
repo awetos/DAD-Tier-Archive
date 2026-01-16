@@ -10,7 +10,7 @@ export default function ActionOptionsRadioSet(){
         </div>
         <div>
             <input type="radio" name="post-action" id="approve-selection" value="approve" />
-            <label htmlFor="approve-selection">approve and move</label>
+            <label htmlFor="approve-selection">approve pending</label>
         </div>
 
         <div>
@@ -23,7 +23,7 @@ export default function ActionOptionsRadioSet(){
         </div>
          <div>
             <input type="radio" name="post-action" id="approve-and-delete-selection" value="approve-and-delete" />
-            <label htmlFor="approve-and-delete-selection">approve and delete </label>
+            <label htmlFor="approve-and-delete-selection">approve and move </label>
         </div>
           <div>
             <input type="radio" name="post-action" id="delete-existing-selection" value="delete-existing" />

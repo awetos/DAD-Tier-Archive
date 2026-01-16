@@ -18,7 +18,7 @@ function formatPretty(data){
       alt={'latest image uploaded.'}
                   sizes="(max-width: 200px)" fill/>
     </div>
-    <div className={classes['title-area']}><span>{data.title}</span></div>
+    <div className={classes['title-area']}><div>{data.title}</div></div>
    
     </Link>
     </>

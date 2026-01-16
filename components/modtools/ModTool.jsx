@@ -4,6 +4,7 @@ import { useActionState } from 'react';
 import { useFormStatus } from 'react-dom';
 import classes from '@/app/modtool/modtool.module.css'
 import ActionOptionsRadioSet from '@/components/modtools/ActionOptionsRadioSet';
+import TierViewer from '../templates/TierViewer';
 
 export default function ModTool(){
     const [formState, formAction] = useActionState(approve, {});
@@ -56,10 +57,9 @@ function displayServerLogs(formState){
     console.log(formState?.request_log?.steps?.id_check?.status);
     return <div className={classes["status-stack"]}>
         <p>Result of id_check: {formState.request_log?.steps?.id_check?.status}</p>
-        <p>Result of row_check: {
-           JSON.stringify(formState.request_log?.steps?.row_check?.row_info)
-            
-            }</p>
+        <p>Result of row_check:</p> 
+        {preview(formState)}
+
 {/* if delete_action or approve_action exists, we assume info has been constructed*/}
         <p>{formState.request_log?.steps?.delete_action?.delete_info}</p>
         <p>{formState.request_log?.steps?.approve_action?.approval_info}</p>
@@ -67,4 +67,27 @@ function displayServerLogs(formState){
         <p>{formState.request_log?.status}</p>
     </div>
     
+}
+
+function getImageFromRow(row_info){
+    //assume all image_url's are valid if through our submitter.
+    //using TierViewer instead now.
+   return <><br/>
+   <img src={row_info.image_url} width="500" height="auto"></img></>;
+}
+
+function preview(formState){
+    
+    console.log("Previewing row:");
+    const row_info =formState.request_log?.steps?.row_check?.row_info;
+    if(row_info){
+        //row_info exists
+        console.log("rendering row:");
+        console.log(row_info);
+        const res = JSON.stringify(row_info[0]);
+        return <>
+        <TierViewer rowData={row_info[0]}></TierViewer>
+        </>
+    }
+    return <></>
 }

@@ -25,6 +25,10 @@ export default function ActionOptionsRadioSet(){
             <input type="radio" name="post-action" id="approve-and-delete-selection" value="approve-and-delete" />
             <label htmlFor="approve-and-delete-selection">approve and delete</label>
         </div>
+          <div>
+            <input type="radio" name="post-action" id="delete-existing-selection" value="delete-existing" />
+            <label htmlFor="delete-existing-selection">delete existing tierlist</label>
+        </div>
         
     </>
 }

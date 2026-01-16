@@ -9,6 +9,7 @@ export default function Date(){
         previewContext.handlers.changeDateHandler(event.target.value);
     }
     return <>
+    <br/>
       <label>Date Created</label>
          <div className={classes['subtitle']}>Will be today by default</div>
         <input type="date" value={currentDate} onChange={onChangeHandler}></input>

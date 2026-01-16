@@ -1,8 +1,14 @@
 'use server';
 import getIDAsNumber from '@/app/actions/modtools/steps/validatePostNumber'
+
 import getPendingRow from '@/app/actions/modtools/steps/getPendingRow'
+import getExistingRow from '@/app/actions/modtools/steps/getExistingRow'
+
 import sendToApprovedDB from '@/app/actions/modtools/steps/sendToApprovedDB';
+
 import deleteFromDB from '@/app/actions/modtools/steps/deleteFromDB';
+import deleteExistingFromDB from '@/app/actions/modtools/steps/deleteExistingFromDB'
+
 import uploadModLog from '@/app/actions/modtools/uploadModLog';
 
 //assume you receive a formData with formData.get("id") == id
@@ -18,18 +24,31 @@ export default async function approve(prevState, formData){
         request_log.error = "Invalid input, cannot proceed with processing";
     }
     else{
-
-        const row = await getPendingRow(request_log, numeric);
-       
-        if(row == null || row == undefined){
-            request_log.error = "Row was not found.";
+        const choice = formData.get("post-action");
+        if(choice ==="delete-existing"){
+            const row =await getExistingRow(request_log, numeric);
+            
+            if(row == null || row == undefined){
+                request_log.error = "Row was not found in tierlists";
+            }else if(row.length > 0){ //the row was found in tierlists
+                const rowData = row[0];
+                await deleteExistingFromDB(request_log, rowData, true);
+                request_log.status="You deleted an existing post forever :(";
+            }
         }
-        else if(row.length > 0) //valid post
-        {
-            const rowData = row[0];
-            //there are database and cloudinary calls, so you must await.
-            await checkDesiredAction(request_log, formData, rowData);
-            request_log.status = "Your request was processed successfully.";
+        else{
+            const row = await getPendingRow(request_log, numeric);
+       
+            if(row == null || row == undefined){
+                request_log.error = "Row was not found in pending";
+            }
+            else if(row.length > 0) //valid post
+            {
+                const rowData = row[0];
+                //there are database and cloudinary calls, so you must await.
+                await checkDesiredAction(request_log, formData, rowData);
+                request_log.status = "Your request was processed successfully.";
+            }
         }
     }
     console.log(request_log);

@@ -4,6 +4,10 @@
   font-family: "Onest", sans-serif;
   font-optical-sizing: auto;
 }
+.my-button img{
+    filter: invert(100%);
+    padding-left: 4px;
+}
 
 .my-button {
     background-color: #424240;

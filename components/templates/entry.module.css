@@ -1,3 +1,10 @@
+@import url('https://fonts.googleapis.com/css2?family=Onest:wght@100..900&display=swap');
+
+.onest {
+  font-family: "Onest", sans-serif;
+  font-optical-sizing: auto;
+}
+
 .entry{
     background-color: white;
    
@@ -7,7 +14,9 @@
     height: fit-content;*/
     
     overflow: hidden;
-     border: 3px papayawhip solid;
+    /*border: 3px papayawhip solid;*/
+    /*DAD orange*/
+    border: 2px gainsboro solid;
       box-sizing: border-box;
     -moz-box-sizing: border-box;
     -webkit-box-sizing: border-box;
@@ -28,21 +37,29 @@
 }
 
 .entry:hover{
-border: 3px wheat solid;
+    /*border: 3px wheat solid;*/
+    /*DAD BLUE*/
+    border: 2px orange solid;
 }
 .title-area{
-    max-height: 50px;
+    display: flex;
+    flex: 1;
+    height: 100%;
     width: 150px;
+    font-weight: bold;
     text-align: center;
-    margin-bottom: auto;
-
+    justify-content: center;
+    align-items: center;
+    font-family: "onest", Arial, Helvetica, sans-serif;
+    
 }
 
 .entry img{
     object-fit: contain;
 }
-
+/*npm i baseline-browser-mapping@latest -D*/
 .image-preview{
+    flex: 3;
     display: flex;
     width: 150px;
     height: 150px;
@@ -59,4 +76,8 @@ border: 3px wheat solid;
     font-size: 1em;
     text-decoration: none;
     color: black;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+    height: 100%;
 }

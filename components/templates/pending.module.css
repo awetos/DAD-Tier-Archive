@@ -64,3 +64,29 @@
     justify-content: center;
     flex: 1;
 }
+
+
+
+@media screen and (max-width: 600px){
+    .entry-type, .entry-created, .entry-status{
+        display: none;
+    }
+
+    .title{
+        flex: 2
+    }
+    .entry-status{
+        flex: 2
+    }
+
+    .entry p{
+    margin: 4px;
+    }
+}
+
+
+@media screen and (max-width: 800px){
+    .entry p{
+    margin: 8px;
+    }
+}

@@ -1,5 +1,6 @@
 import { usePreviewerReadValues } from "../PreviewProvider/usePreviewProvider"
 import classes from './preview.module.css'
+import stringParser from "@/components/templates/helpers/stringParser";
 
 export default function Description(){
     const currentDescription = usePreviewerReadValues().values.description;
@@ -10,7 +11,8 @@ export default function Description(){
         renderPreview = <></>;
     }
     else{
-        renderPreview = <p>{currentDescription}</p>;
+        //renderPreview = <p>{currentDescription}</p>;
+        renderPreview = stringParser(currentDescription, '\n');
     }
 
     return <>

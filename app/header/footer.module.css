@@ -21,4 +21,9 @@
 }
 .footer-whole a{
     color: #7A7B76;
+    padding-left: 1em;
+}
+
+.contact{
+    color: white;
 }

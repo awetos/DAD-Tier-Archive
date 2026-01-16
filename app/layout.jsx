@@ -13,7 +13,7 @@ export default function RootLayout({ children }) {
     return (
         <html lang="en">
             <head>
-                <link rel="icon" href="/badge.png" sizes="any" />
+                <link rel="icon" href="/images/podium.png" sizes="any" />
             </head>
             <body className="">
                 <Header/>

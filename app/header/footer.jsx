@@ -14,6 +14,8 @@ export default function Footer(){
                     </Link>
                       <Link href="/modtool">Mod Tool
                     </Link>
+                     <Link href="/contact" className={classes["contact"]}>Contact
+                    </Link>
                 </p>
         </div>
 }

@@ -2,15 +2,15 @@
 import { neon } from '@netlify/neon';
 import addLog from '@/app/actions/modtools/steps/addLog'
 
-export default async function getPendingRow(request_log, id){
+export default async function getExistingRow(request_log, id){
 
     const info ={
         row_info: ""
     }
     const sql = neon(); // automatically uses env NETLIFY_DATABASE_URL
-    const res = await sql`SELECT * FROM pending WHERE id = ${id};`;
+    const res = await sql`SELECT * FROM tierlists WHERE id = ${id};`;
     if(res.length > 0){
-        request_log.status=`${id} was found in pending.`;
+        request_log.status=`${id} was found in tierlists.`;
         info.row_info = res;
         addLog(request_log,"row_check",info);
         //returns an array, really an array with length 1. 

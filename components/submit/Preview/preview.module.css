@@ -2,7 +2,8 @@
     display: flex;
     flex: 1;
     flex-direction: column;
-    background-color: rgb(255, 255, 255);
+    
+    background-color: snow;
     align-items: center;
     height: 100%;
     
@@ -45,11 +46,20 @@
 }
 
 .description-area{
+    
+    width: calc(inherit - 6px);
+    max-height: 80vh;
     overflow-y: auto;
-    width: calc(100% - 6px);
-    max-height: 20vh;
-    background-color: gainsboro;
+    background-color: white;
     margin: 3px;
+    
+    padding-left: 1em;
+    padding-right: 1em;
+    text-indent: 2em;
+}
+.description-area p{
+    padding-top: 4px;
+    padding-bottom: 4px;
 }
 
 
@@ -67,7 +77,6 @@
 
 .post-number-area{
     height: fit-content;
-   
     font-size: smaller;
     margin-top: auto;
 }

@@ -1,18 +1,16 @@
 
 .image-viewer{
     display: flex;
-    height: 500px;
+    height: 80vh;
     width: 100%;
     position: relative; /*Needed for Image*/
     justify-items: center;
     align-items: center;
-    background-color: cornflowerblue;
 }
 
 .container{
     display: flex;
     flex-direction: column;
-    background-color: rosybrown;
     align-items: center;
 }
 
@@ -20,25 +18,29 @@
     object-fit: contain; 
 }
 
+.title p, .tier-type p, .date-submitted p, .date-created p, .post-number p{
+    margin: 2px;
+}
+
+
 .title{
     display: flex;
-    background-color: aqua;
+    font-weight: bold;
+    font-size: 1em;
 }
 .tier-type{
-    background-color: seagreen;
-
 }
 .date-submitted{
-    background-color: darksalmon;
 
 }
 .date-created{
-    background-color: red;
+   
 }
 .post-number{
-    background-color:goldenrod;
 }
 .description{
-    background-color:lightgray;
-
+    background-color: white;
+    padding-left: 1em;
+    text-indent: 3em;
+    margin: 5px;
 }

@@ -15,6 +15,8 @@ export default function Footer(){
                      
                      <Link href="/contact" className={classes["contact"]}>Contact
                     </Link>
+
+                    <Link href="https://github.com/awetos/DAD-Tier-Archive">Source Code</Link>
                 </p>
         </div>
 }

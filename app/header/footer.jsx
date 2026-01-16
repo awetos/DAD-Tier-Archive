@@ -12,8 +12,7 @@ export default function Footer(){
                 <p>
                     <Link href="/changes">Vers 1.0
                     </Link>
-                      <Link href="/modtool">Mod Tool
-                    </Link>
+                     
                      <Link href="/contact" className={classes["contact"]}>Contact
                     </Link>
                 </p>

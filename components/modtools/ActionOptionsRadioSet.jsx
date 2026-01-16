@@ -10,7 +10,7 @@ export default function ActionOptionsRadioSet(){
         </div>
         <div>
             <input type="radio" name="post-action" id="approve-selection" value="approve" />
-            <label htmlFor="approve-selection">approve pending</label>
+            <label htmlFor="approve-selection">approve and move</label>
         </div>
 
         <div>

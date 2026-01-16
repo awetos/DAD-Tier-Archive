@@ -6,16 +6,16 @@ export default function ActionOptionsRadioSet(){
     <br/>
         <div>
             <input type="radio" name="post-action" id="check-selection" value="check" />
-            <label htmlFor="check-selection">check post</label>
+            <label htmlFor="check-selection">check post (pending)</label>
         </div>
         <div>
             <input type="radio" name="post-action" id="approve-selection" value="approve" />
-            <label htmlFor="approve-selection">approve</label>
+            <label htmlFor="approve-selection">approve pending</label>
         </div>
 
         <div>
             <input type="radio" name="post-action" id="delete-selection" value="delete"/>
-            <label htmlFor="delete-selection">delete</label>
+            <label htmlFor="delete-selection">delete pending</label>
             {/*We create an association between the label with id-htmlFor */}
             {/*name is the key */}
             {/*Value is what is actually stored in the form data*/}
@@ -23,7 +23,7 @@ export default function ActionOptionsRadioSet(){
         </div>
          <div>
             <input type="radio" name="post-action" id="approve-and-delete-selection" value="approve-and-delete" />
-            <label htmlFor="approve-and-delete-selection">approve and delete</label>
+            <label htmlFor="approve-and-delete-selection">approve and delete </label>
         </div>
           <div>
             <input type="radio" name="post-action" id="delete-existing-selection" value="delete-existing" />

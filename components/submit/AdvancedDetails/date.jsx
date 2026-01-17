@@ -12,7 +12,7 @@ export default function Date(){
     <br/>
       <label>Date Created</label>
          <div className={classes['subtitle']}>Will be today by default</div>
-        <input type="date" value={currentDate} onChange={onChangeHandler}></input>
+        <input type="date" name= "created-date" id = "created-date" value={currentDate} onChange={onChangeHandler}></input>
         <br/>
     </>
 }

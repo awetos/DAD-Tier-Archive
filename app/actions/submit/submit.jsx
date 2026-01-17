@@ -41,7 +41,7 @@ async function SubmitText(formData){
     
     const description = formData.get('description') ?? "";
     const post_number = formData.get('post-number') ?? "";
-    const date = formData.get('date') ?? getDateAsString();
+    const created_date = formData.get('created-date') ?? getDateAsString();
 
     const submission_time = getCurrentTimeAsString();
     const status = "unread";
@@ -51,7 +51,7 @@ async function SubmitText(formData){
     (title, tier_type, image_url, description, post_number, created_date,
     submission_time, status, reason, thumb_url) VALUES (
     ${title},  ${tier_type}, ${image_url}, ${description},
-    ${post_number}, ${date}, ${submission_time}, ${status}, ${reason}, ${thumb_url}) RETURNING *`
+    ${post_number}, ${created_date}, ${submission_time}, ${status}, ${reason}, ${thumb_url}) RETURNING *`
 
     console.log(res);
     return res;

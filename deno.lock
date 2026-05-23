@@ -11,18 +11,31 @@
   "workspace": {
     "packageJson": {
       "dependencies": [
+        "npm:@cloudinary/react@^1.14.3",
+        "npm:@cloudinary/url-gen@^1.22.0",
+        "npm:@heroui/accordion@^2.2.26",
+        "npm:@heroui/react@^2.8.7",
+        "npm:@heroui/system@^2.4.25",
+        "npm:@heroui/theme@^2.4.25",
+        "npm:@neondatabase/serverless@^1.0.2",
         "npm:@netlify/blobs@^10.5.0",
+        "npm:@netlify/neon@0.1",
         "npm:@tailwindcss/postcss@^4.1.15",
         "npm:babel-plugin-react-compiler@1",
         "npm:blobshape@1",
         "npm:bright@1",
+        "npm:cloudinary@^2.8.0",
         "npm:eslint-config-next@^16.0.8",
         "npm:eslint@9.39.2",
+        "npm:framer-motion@^12.26.1",
         "npm:markdown-to-jsx@^7.7.16",
+        "npm:neon@2",
+        "npm:next-cloudinary@^6.17.5",
         "npm:next@^16.0.8",
         "npm:postcss@^8.4.36",
         "npm:react-dom@19.2.3",
         "npm:react@19.2.3",
+        "npm:sharp@~0.34.5",
         "npm:tailwindcss@^4.1.15",
         "npm:unique-names-generator@^4.7.1"
       ]

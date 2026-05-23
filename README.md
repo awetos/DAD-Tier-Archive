@@ -1,18 +1,8 @@
-# Next.js on Netlify Platform Starter
+# DAD Tierlist Archive
 
-[Live Demo](https://nextjs-platform-starter.netlify.app/)
+[DAD Tierlist Archive](https://dad-tier-archive.netlify.app/)
 
-A modern starter based on Next.js 16 (App Router), Tailwind, and [Netlify Core Primitives](https://docs.netlify.com/core/overview/#develop) (Edge Functions, Image CDN, Blob Store).
-
-In this site, Netlify Core Primitives are used both implictly for running Next.js features (e.g. Route Handlers, image optimization via `next/image`, and more) and also explicitly by the user code.
-
-Implicit usage means you're using any Next.js functionality and everything "just works" when deployed - all the plumbing is done for you. Explicit usage is framework-agnostic and typically provides more features than what Next.js exposes.
-
-## Deploying to Netlify
-
-Click the button below to deploy this template to your Netlify account.
-
-[![Deploy to Netlify](https://www.netlify.com/img/deploy/button.svg)](https://app.netlify.com/start/deploy?repository=https://github.com/netlify-templates/next-platform-starter)
+This site allows anonymous user submissions for the archiving fanmade tierlists made on the dad.gallery website. It is open source - as you can see in the actions server, no data about the user is saved at all. It stores information on Postgres database, and images on Cloudinary. The environment variables are linked to the owner of the account where it is deployed on Netlify.
 
 ## Developing Locally
 

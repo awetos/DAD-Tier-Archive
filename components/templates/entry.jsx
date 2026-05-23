@@ -1,25 +1,33 @@
-//Contains on item of a tierlist. 
-import classes from '@/components/templates/entry.module.css'
+//Contains on item of a tierlist.
+import classes from '@/components/templates/entry.module.css';
 import Image from 'next/image';
 import Link from 'next/link';
 
-export default function Entry({data}){
-   
-    return <>
-        <div className={classes['entry']}>  {formatPretty(data)} </div>
-    </>
+export default function Entry({ data }) {
+    return (
+        <>
+            <div className={classes['entry']}> {formatPretty(data)} </div>
+        </>
+    );
 }
 //make sure that the sizes matches the entry.module.css in the future if you want to change it
-function formatPretty(data){
-    return <>
-    <Link href={`/tierlist/${data.id}`}>
-    <div className={classes['image-preview']}>
-         <Image src={data.thumb_url}
-      alt={'latest image uploaded.'}
-                  sizes="(max-width: 200px)" fill/>
-    </div>
-    <div className={classes['title-area']}><div>{data.title}</div></div>
-   
-    </Link>
-    </>
+function formatPretty(data) {
+    return (
+        <>
+            <Link href={`/tierlist/${data.id}`}>
+                <div className={classes['image-preview']}>
+                    <Image
+                        src={data.thumb_url}
+                        alt="latest image uploaded"
+                        fill
+                        sizes="(max-width: 200px) 100vw, 200px"
+                        className="object-cover"
+                    />
+                </div>
+                <div className={classes['title-area']}>
+                    <div>{data.title}</div>
+                </div>
+            </Link>
+        </>
+    );
 }

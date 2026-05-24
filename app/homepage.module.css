@@ -1,15 +1,38 @@
 .interior-content {
-  color: black;
+    color: black;
 }
 
-.centered-content{
-  text-align: center;
+.centered-content {
+    text-align: center;
 }
 
-
-.image-grid{
+.image-grid {
     display: flex;
-  flex-wrap: wrap;
-  gap: 4px;
-  justify-content: center;   
+    flex-wrap: wrap;
+    gap: 4px;
+    justify-content: center;
+}
+
+.disabled-page-button {
+    min-width: 10px;
+    padding: 4px;
+    color: gray;
+    background: none;
+}
+.page-button {
+    min-width: 10px;
+    padding: 4px;
+    background: gainsboro;
+    text-decoration: none;
+    color: black;
+}
+.pages-footer {
+    display: flex;
+    flex-direction: row;
+    width: 100%;
+    padding-top: 4px;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 2px;
 }
